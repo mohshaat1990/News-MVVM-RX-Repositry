@@ -1,0 +1,140 @@
+
+/*
+ Localizable.strings
+ DareesTeacher
+ 
+ Created by passant on 7/4/18.
+ Copyright © 2018 tendegrees. All rights reserved.
+ */
+"test1" = "تيست ١";
+"test2" = "تيست٢";
+"testLabel" = "شعار";
+
+/////////////////FORGOTPASSWORD///////////////////
+"done" = "done";
+"please enter valid phone number" = "please enter valid phone number";
+"forget password title" = "forget password title";
+"Success Send Message to your email" = "Success Send Message to your email";
+"Code Sent Sucessfully" = "Code Sent Sucessfully" ;
+"Enter Email Token" = "Enter Email Token";
+"Email Token" = "Email Token";
+"Password" = "Password";
+"Old Password" = "Old Password";
+"please enter your email token" = "please enter your email token";
+"Password changed Successfully" = "Password changed Successfully";
+"Submit" = "Submit";
+/////////////////LOGIN ///////////////////////////
+"userName" = "User Name";
+"please enter user name" = "please enter user name";
+"please enter mandatory fields first" = "please enter mandatory fields first" ;
+"please enter your phone number" = "please enter your phone numbe";
+"please enter your password" = "please enter your password";
+"password must be more than eight characters" = "password must be more than Five characters";
+"Login Title" = "Login";
+"Login" = "Login";
+"Submit" = "Submit";
+"Forget your password?" = "Forget your password?" ;
+"just tell us the email address you registered with" = "just tell us the email address you registered with";
+"Don't have account?" = "Don't have account?";
+"Sign up" = "Sign up";
+"Sign in" = "Sign in";
+"Phone" = "Phone";
+"Password" = "Password";
+"Male" = "Male";
+"Female" = "Female";
+"Gender" = "Gender";
+"please enter your name" = "please enter your name";
+"Full name must be more than four characters" = "Full name must be more than four characters";
+"please enter your second name" = "please enter your second name";
+"please enter your email address" = "please enter your email address";
+"please enter valid email" = "please enter valid email";
+"please confirm your password" = "please confirm your password";
+"please choose your gender" = "please choose your gender";
+"please enter your location" = "please enter your location";
+"New Passwords Should Be Equal" = "Password does not match confirmation";
+"Skip" = "Skip";
+"Login Without Register" = "Login Without Register";
+///////////////////////Verification///////////////
+"Verfication code" = "Verfication code";
+"Confirm" = "Confirm";
+"Resend Verification Code" = "Resend Verification Code";
+////////////////REGISTER AND LOGIN TEXT FIELDS/////////////
+"Phone" = "Phone";
+"Full Name" = "Full Name";
+"Password" = "Password";
+"Confirm Password" = "Confirm Password" ;
+"Email Address" = "Email Address";
+"Location" = "Location";
+"Birth Date" = "Birth Date";
+"Gendure" = "Gendure";
+"Male"   = "Male";
+"Female" = "Female";
+"please enter your birth date" = "please enter your birth date";
+////////////////////////Profile///////////////////////
+"My Profile" = "MyProfile";
+"Edit MyProfile" = "Edit MyProfile";
+"years" = "years";
+"Applied Job" = "Applied Job";
+"Change Password" = "Change Password";
+"Language" = "Language";
+"Logout" = "Logout";
+"Subscribe" = "Subscribe";
+"Get all benefit and access" = "Get all benefit and access";
+////////////////////////CHANGE PASSWORD ///////////////////
+"it's a good idea to use a strong password that you don't use elsewhere" = "it's a good idea to use a strong password that you don't use elsewhere";
+"Set a new password" = "Set a new password";
+"Change Password" = "Change Password";
+//////////////logout////////////////////////////////////////
+"Are you Shure to Logout ?" = "Are use sure to logout ?";
+"Logout" = "Logout" ;
+"Ok" = "Ok" ;
+"Cancel" = "Cancel" ;
+////////////////////////MAIN/////////////////////////////
+"missions" = "Missions" ;
+"important" = "Importance";
+"rasedtitle" = "Rased  at your service ... \n to ensure the success of your business";
+////////////////////////////Menu///////////////////
+"Category" = "Category";
+"Terms And Conditions" = "Terms And Conditions";
+"About Us" = "About Us";
+"Subscribed" = "Subscribed";
+///////////////////////////////////////
+"Version" = "Version";
+"Settings" = "Settings";
+/////////////////Create Mission /////////////////
+"New Mission" = "New Mission";
+"Name" = "Mission Title";
+"Catgoery" = "Catgoery";
+"Importance" = "Importance";
+"Select Location" = "Select Location";
+"Notes" = "Notes";
+"Write Here" = "Write your mission notes here";
+"Write Picture Notes Here" = "Write Picture Notes Here";
+"Please enter Describtion Fields First" = "Please enter Describtion Fields First";
+"success creating mession" = "success creating mession";
+"Please enter at least one Image" = "Please enter at least one Image";
+"please enter Name" = "please enter Name";
+"please enter location" = "please enter location";
+"Submit" = "Submit";
+"Save" =  "Save";
+"Delete" = "Delete";
+"wite note" = "Picture Notes";
+"Choose From Camera Roll" = "Choose From Camera Roll";
+"Take Picture" = "Take Picture";
+"Uploading image" = "Uploading image";
+"Mission Number" = "Mission Number";
+"Photo" = "Photo";
+"Please Select an Option" = "Please Select an Option";
+"Camera" = "Camera";
+"Gallery" = "Gallery";
+//////////////////////////////tasnefat/////////////
+"tasenfat" = "Filter With";
+"sanaf" = "Filter";
+"All Missions" = "All Missions";
+/*
+ Localizable.strings
+ DareesTeacher
+ 
+ Created by passant on 7/4/18.
+ Copyright © 2018 tendegrees. All rights reserved.
+ */
