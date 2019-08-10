@@ -16,8 +16,6 @@ class NewsViewController: UIViewController {
     private var newsService = HeadLinesWebService()
     private let disposeBag = DisposeBag()
     private let loadSubject = PublishSubject<Void>()
-    private let loadMoreSubject = PublishSubject<Void>()
-    private let pullToRefreshSubject = PublishSubject<Void>()
     // MARK: - UI
     @IBOutlet weak var newsTableView: UITableView!
     // MARK: - Life Cycle
@@ -26,8 +24,7 @@ class NewsViewController: UIViewController {
         registerCell()
         viewModel = ViewModelType(newsService)
         configure(with: viewModel)
-        initPullToRefresh()
-        initLoadMoreToRefresh()
+       
     }
     
 }
@@ -51,19 +48,25 @@ extension NewsViewController: ConfigurableTableView {
         
     }
     
-    func initPullToRefresh() {
-        self.newsTableView.configRefreshHeader(container:self) { [weak self] in
-            self?.pullToRefreshSubject.onNext(())
+    private func initPullToRefresh()-> Observable<Void> {
+        return Observable.create { observer in
+            self.newsTableView.configRefreshHeader(container:self) {
+            observer.onNext(())
+        }
+        return Disposables.create()
         }
     }
     
-    func initLoadMoreToRefresh() {
-        self.newsTableView.configRefreshFooter(container:self) { [weak self] in
-            self?.newsTableView.switchRefreshFooter(to: .refreshing)
-            self?.loadMoreSubject.onNext(())
+    private func initLoadMoreToRefresh()-> Observable<Void> {
+        return Observable.create { observer in
+            self.newsTableView.configRefreshFooter(container:self) {
+                self.newsTableView.switchRefreshFooter(to: .refreshing)
+                observer.onNext(())
+            }
+            return Disposables.create()
         }
-        
     }
+
 }
 // MARK: - View Model Configure
 extension NewsViewController: ControllerType {
@@ -85,9 +88,9 @@ extension NewsViewController: ConfigureRx {
             .disposed(by: disposeBag)
         loadSubject.subscribe(viewModel.input.load)
             .disposed(by: disposeBag)
-        loadMoreSubject.subscribe(viewModel.input.loadMore)
+        initLoadMoreToRefresh().subscribe(viewModel.input.loadMore)
             .disposed(by: disposeBag)
-        pullToRefreshSubject.subscribe(viewModel.input.pullToRefresh)
+        initPullToRefresh().subscribe(viewModel.input.pullToRefresh)
             .disposed(by: disposeBag)
         
         
