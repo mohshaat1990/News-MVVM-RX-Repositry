@@ -15,7 +15,6 @@ class NewsViewController: UIViewController {
     private var viewModel: ViewModelType!
     private var newsService = HeadLinesWebService()
     private let disposeBag = DisposeBag()
-    private let loadSubject = PublishSubject<Void>()
     // MARK: - UI
     @IBOutlet weak var newsTableView: UITableView!
     // MARK: - Life Cycle
@@ -66,15 +65,21 @@ extension NewsViewController: ConfigurableTableView {
             return Disposables.create()
         }
     }
+    
+    private func initLoad()-> Observable<Void> {
+        return Observable.create { observer in
+                observer.onNext(())
+            return Disposables.create()
+          }
+        }
+    
 
 }
 // MARK: - View Model Configure
 extension NewsViewController: ControllerType {
     func configure(with viewModel: NewsViewModel) {
-        bindViews()
         obseverLoading()
-       self.loadSubject.onNext(())
-        
+        bindViews()
     }
 }
 // MARK: - RX Configure
@@ -86,7 +91,7 @@ extension NewsViewController: ConfigureRx {
                                                                     
             }
             .disposed(by: disposeBag)
-        loadSubject.subscribe(viewModel.input.load)
+        initLoad().subscribe(viewModel.input.load)
             .disposed(by: disposeBag)
         initLoadMoreToRefresh().subscribe(viewModel.input.loadMore)
             .disposed(by: disposeBag)
