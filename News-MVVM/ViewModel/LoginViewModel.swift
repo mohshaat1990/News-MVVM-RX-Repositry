@@ -76,8 +76,14 @@ class LoginViewModel: ViewModelProtocol {
                 }
             })
             .disposed(by: disposeBag)
+        observeUserNameSubject()
     }
     
+    func observeUserNameSubject() {
+        userNameSubject.subscribe(onNext: { (text) in
+            print(text)
+        })
+    }
     func validateLoginTextFields(credentials: Credentials) -> Bool {
         var valid = true
         let error = ErrorResponse(JSON:[:])

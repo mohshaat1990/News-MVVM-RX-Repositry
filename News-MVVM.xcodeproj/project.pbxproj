@@ -33,7 +33,6 @@
 		E52107F922F0AF0B00465497 /* HeadLinesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52107F822F0AF0B00465497 /* HeadLinesServiceProtocol.swift */; };
 		E52107FB22F0BB1B00465497 /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52107FA22F0BB1B00465497 /* NewsRequest.swift */; };
 		E547716322F223F000449B7B /* ConfigureTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547716222F223F000449B7B /* ConfigureTableView.swift */; };
-		E547716522F2255700449B7B /* ConfigureRx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E547716422F2255700449B7B /* ConfigureRx.swift */; };
 		E5534D7C22EFC37200A75DF6 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5534D7B22EFC37200A75DF6 /* NewsViewController.swift */; };
 		E5E26F4822F3A31300BB8BE9 /* RealmListTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E26F4722F3A31300BB8BE9 /* RealmListTransform.swift */; };
 		E5E26F4A22F3A33A00BB8BE9 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E26F4922F3A33A00BB8BE9 /* BaseObject.swift */; };
@@ -90,7 +89,6 @@
 		E52107F822F0AF0B00465497 /* HeadLinesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLinesServiceProtocol.swift; sourceTree = "<group>"; };
 		E52107FA22F0BB1B00465497 /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
 		E547716222F223F000449B7B /* ConfigureTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureTableView.swift; sourceTree = "<group>"; };
-		E547716422F2255700449B7B /* ConfigureRx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureRx.swift; sourceTree = "<group>"; };
 		E5534D7B22EFC37200A75DF6 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		E5E26F4722F3A31300BB8BE9 /* RealmListTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmListTransform.swift; sourceTree = "<group>"; };
 		E5E26F4922F3A33A00BB8BE9 /* BaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
@@ -407,7 +405,6 @@
 				E5F4A03922EDEF0E00A9C6FB /* ControllerType.swift */,
 				E52107E622F08C9E00465497 /* ConfigureCell.swift */,
 				E547716222F223F000449B7B /* ConfigureTableView.swift */,
-				E547716422F2255700449B7B /* ConfigureRx.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -465,6 +462,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = E519FC1522ECD66200512CDD;
 			productRefGroup = E519FC1F22ECD66200512CDD /* Products */;
@@ -577,7 +575,6 @@
 				E5F714C822F0F59300A4E87F /* HeadLinesWebService.swift in Sources */,
 				E5F4A03622EDEEEF00A9C6FB /* UIViewController+Extensions.swift in Sources */,
 				E52107EF22F08F0000465497 /* Source.swift in Sources */,
-				E547716522F2255700449B7B /* ConfigureRx.swift in Sources */,
 				E519FC5222ECE42A00512CDD /* FontConstants.swift in Sources */,
 				E519FC2222ECD66200512CDD /* AppDelegate.swift in Sources */,
 				E519FC5622ECE47A00512CDD /* UIColors+Extensions.swift in Sources */,

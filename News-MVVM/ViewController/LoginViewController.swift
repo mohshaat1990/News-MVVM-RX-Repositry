@@ -47,23 +47,13 @@ class LoginViewController: UIViewController {
 extension LoginViewController: ControllerType {
     
     func configure(with viewModel: LoginViewModel) {
-        bindViews()
-        observeErrors()
-        observeResult()
-        obseverLoading()
+        bindViews(with: viewModel)
+        observeErrors(with: viewModel)
+        observeResult(with: viewModel)
+        obseverLoading(with: viewModel)
     }
     
-    static func create(with viewModel: LoginViewModel) -> UIViewController {
-        let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        controller.viewModel = viewModel
-        return controller
-    }
-}
-// MARK: - RX Configure
-extension LoginViewController: ConfigureRx {
-    
-    func bindViews() {
+    func bindViews(with viewModel: LoginViewModel) {
         userNameTextField.textFiled.rx.text.asObservable()
             .ignoreNil()
             .subscribe(viewModel.input.userName)
@@ -77,7 +67,7 @@ extension LoginViewController: ConfigureRx {
             .disposed(by: disposeBag)
     }
     
-    func observeErrors() {
+    func observeErrors(with viewModel: LoginViewModel) {
         viewModel.output.validationErrorsObservable.subscribe(onNext:{ (error) in
             self.updateTextFields(error: error)
         }).disposed(by: disposeBag)
@@ -87,13 +77,13 @@ extension LoginViewController: ConfigureRx {
         }).disposed(by: disposeBag)
     }
     
-    func observeResult(){
+    func observeResult(with viewModel: LoginViewModel){
         viewModel.output.loginResultObservable.subscribe(onNext:{  (user) in
             self.performSegue(withIdentifier:"NewsViewController", sender: nil)
         }).disposed(by: disposeBag)
     }
     
-    func obseverLoading() {
+    func obseverLoading(with viewModel: LoginViewModel) {
         viewModel.output.rx_isLoading.subscribe(onNext:{  (loading) in
             if loading == true {
                 self.loginButtonAction.startAnimation()
@@ -102,6 +92,14 @@ extension LoginViewController: ConfigureRx {
             }
         }).disposed(by: disposeBag)
     }
+    
+    static func create(with viewModel: LoginViewModel) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        controller.viewModel = viewModel
+        return controller
+    }
 }
+
 
 

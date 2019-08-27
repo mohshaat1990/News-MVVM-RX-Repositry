@@ -19,6 +19,8 @@ protocol ControllerType: class {
     /// - Parameter viewModel: View model object
     /// - Returns: View controller of concrete type
     static func create(with viewModel: ViewModelType) -> UIViewController
+    
+    func bindViews(with viewModel: ViewModelType)
 }
 
 extension ControllerType {
@@ -26,4 +28,12 @@ extension ControllerType {
         return UIViewController()
     }
 
+}
+extension ControllerType {
+    func  observeErrors(with viewModel: ViewModelType) {}
+    
+    func observeResult(with viewModel: ViewModelType)  {}
+    
+    func obseverLoading(with viewModel: ViewModelType) {}
+    
 }

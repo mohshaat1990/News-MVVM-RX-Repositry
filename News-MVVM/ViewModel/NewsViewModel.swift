@@ -9,6 +9,7 @@
 import RxSwift
 import RxCocoa
 import Reachability
+
 class NewsViewModel: ViewModelProtocol {
     
     struct Input {
@@ -37,7 +38,7 @@ class NewsViewModel: ViewModelProtocol {
     private let loadSubject = PublishSubject<Void>()
     private let loadMoreSubject = PublishSubject<Void>()
     private let pullToRefreshSubject = PublishSubject<Void>()
-    private let articlesSubject:BehaviorRelay<[Article]> =  BehaviorRelay<[Article]>(value: [])
+    private let articlesSubject =  BehaviorRelay<[Article]>(value: [])
     private let serverErrorsSubject = PublishSubject<String>()
     private let disposeBag = DisposeBag()
     private var reachability: Reachability?

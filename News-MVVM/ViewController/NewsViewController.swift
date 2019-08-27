@@ -9,6 +9,7 @@ import RxSwift
 import UIKit
 import PullToRefreshKit
 import Windless
+
 class NewsViewController: UIViewController {
     typealias ViewModelType = NewsViewModel
     // MARK: - Properties
@@ -18,12 +19,12 @@ class NewsViewController: UIViewController {
     // MARK: - UI
     @IBOutlet weak var newsTableView: UITableView!
     // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
         viewModel = ViewModelType(newsService)
         configure(with: viewModel)
-       
     }
     
 }
@@ -78,16 +79,14 @@ extension NewsViewController: ConfigurableTableView {
 // MARK: - View Model Configure
 extension NewsViewController: ControllerType {
     func configure(with viewModel: NewsViewModel) {
-        obseverLoading()
-        bindViews()
+        obseverLoading(with: viewModel)
+        bindViews(with: viewModel)
     }
-}
-// MARK: - RX Configure
-extension NewsViewController: ConfigureRx {
-    func bindViews() {
+    
+    func bindViews(with viewModel: NewsViewModel) {
         viewModel.output.articles.bind(to: newsTableView.rx.items(cellIdentifier: HeadlineCell.getCellIdentifier(),
                                                                   cellType: HeadlineCell.self)) {  row, article, cell in
-                                                        cell.configure(data: article)
+                                                                    cell.configure(data: article)
                                                                     
             }
             .disposed(by: disposeBag)
@@ -101,11 +100,11 @@ extension NewsViewController: ConfigureRx {
         
     }
     
-    func obseverLoading() {
+    func obseverLoading(with viewModel: NewsViewModel) {
         viewModel.output.rx_isLoading.subscribe(onNext:{  (loading) in
             if loading == false {
                 self.newsTableView.switchRefreshFooter(to: .normal)
-             self.newsTableView.switchRefreshHeader(to: .normal(.success,0.0))
+                self.newsTableView.switchRefreshHeader(to: .normal(.success,0.0))
                 
             }
         }).disposed(by: disposeBag)
@@ -113,9 +112,10 @@ extension NewsViewController: ConfigureRx {
             if loading == true {
                 self.startWindless()
             } else {
-               self.newsTableView.windless.end()
+                self.newsTableView.windless.end()
             }
         }).disposed(by: disposeBag)
     }
     
 }
+
