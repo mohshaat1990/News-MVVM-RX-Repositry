@@ -15,4 +15,5 @@ target 'News-MVVM' do
   pod 'Kingfisher'
   pod 'TweeTextField’, :git => ’https://github.com/oleghnidets/TweeTextField.git', :branch => 'master'
   pod "PullToRefreshKit"
+  pod 'LocalizableLib'
 end

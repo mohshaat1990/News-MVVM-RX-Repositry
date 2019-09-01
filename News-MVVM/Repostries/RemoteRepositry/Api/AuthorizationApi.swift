@@ -7,7 +7,7 @@
 
 import Foundation
 import Moya
-import LocalizableLib
+
 
 struct AuthorizationParamters {
     static let UserName = "user_name"
@@ -50,7 +50,7 @@ extension AuthorizationApi:TargetType , AccessTokenAuthorizable{
     }
     
     var headers : [String : String]? {
-        return [Key.Headers.KEY_ContentType: Key.Headers.KEY_ContentTypeValue , Key.Headers.KEY_Encoding : Key.Headers.KEY_EncodingValue  , Key.Headers.KEY_ApiName: Key.Headers.KEY_ApiValue , Key.Headers.KEY_LANG:MoLocalization.currentAppleLanguage()]
+        return [Key.Headers.KEY_ContentType: Key.Headers.KEY_ContentTypeValue , Key.Headers.KEY_Encoding : Key.Headers.KEY_EncodingValue  , Key.Headers.KEY_ApiName: Key.Headers.KEY_ApiValue ]
     }
     var sampleData: Data { return Data() }  // We just need to return something here to fully implement the protocol
     

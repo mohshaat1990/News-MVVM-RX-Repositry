@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LocalizableLib
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -17,11 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func setupGlobalAppearance(){
-        UITextField.appearance().substituteFontName = FontNames.Rpt.RptRegular
-        UILabel.appearance().substituteFontName = FontNames.Rpt.RptRegular
-        UILabel.appearance().substituteFontNameBold = FontNames.Rpt.RptBold
-        UITextField.appearance().substituteFontNameBold = FontNames.Rpt.RptBold
-    }
+  
 }
 

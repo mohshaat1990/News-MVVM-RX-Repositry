@@ -1,6 +1,6 @@
 //
 //  CustomTextFiled.swift
-//  Zumra
+//  
 //
 //  Created by Mohamed Shaat on 3/13/18.
 //  Copyright © 2018 10degree. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 import TweeTextField
 import LocalizableLib
+
 class CustomTextFiled: UIView {
     
     @IBOutlet weak var textFiled: TweeAttributedTextField!

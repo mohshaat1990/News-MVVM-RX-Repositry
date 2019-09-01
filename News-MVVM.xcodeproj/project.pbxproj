@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		612699381C56217E0AA1DC56 /* Pods_News_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C25EB1AB16D495BA9EEA4E /* Pods_News_MVVM.framework */; };
+		2F8867A411489427A4D17744 /* Pods_News_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88E5F3442F0D5A502BE8C5C /* Pods_News_MVVM.framework */; };
 		E519FC2222ECD66200512CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519FC2122ECD66200512CDD /* AppDelegate.swift */; };
 		E519FC2922ECD66600512CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E519FC2822ECD66600512CDD /* Assets.xcassets */; };
 		E519FC2C22ECD66600512CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E519FC2A22ECD66600512CDD /* LaunchScreen.storyboard */; };
@@ -58,9 +58,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52E25FC23C36A1DF2BD4A83F /* Pods-News-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-MVVM.release.xcconfig"; path = "Target Support Files/Pods-News-MVVM/Pods-News-MVVM.release.xcconfig"; sourceTree = "<group>"; };
-		9061AC4F45FBC6127A02C4BC /* Pods-News-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-News-MVVM/Pods-News-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
-		A6C25EB1AB16D495BA9EEA4E /* Pods_News_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E571FA101E925D2B6B31E10 /* Pods-News-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-MVVM.release.xcconfig"; path = "Target Support Files/Pods-News-MVVM/Pods-News-MVVM.release.xcconfig"; sourceTree = "<group>"; };
+		43DF7DEB89CB250235CB82C6 /* Pods-News-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-News-MVVM/Pods-News-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		B88E5F3442F0D5A502BE8C5C /* Pods_News_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E519FC1E22ECD66200512CDD /* News-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E519FC2122ECD66200512CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E519FC2822ECD66600512CDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				612699381C56217E0AA1DC56 /* Pods_News_MVVM.framework in Frameworks */,
+				2F8867A411489427A4D17744 /* Pods_News_MVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,16 +130,16 @@
 		339095AB0AB446E80FAFAB1F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9061AC4F45FBC6127A02C4BC /* Pods-News-MVVM.debug.xcconfig */,
-				52E25FC23C36A1DF2BD4A83F /* Pods-News-MVVM.release.xcconfig */,
+				43DF7DEB89CB250235CB82C6 /* Pods-News-MVVM.debug.xcconfig */,
+				0E571FA101E925D2B6B31E10 /* Pods-News-MVVM.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CBD5D8F985063CC33BC20302 /* Frameworks */ = {
+		3B4D15B184192A4527A3BB00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6C25EB1AB16D495BA9EEA4E /* Pods_News_MVVM.framework */,
+				B88E5F3442F0D5A502BE8C5C /* Pods_News_MVVM.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 				E519FC2022ECD66200512CDD /* News-MVVM */,
 				E519FC1F22ECD66200512CDD /* Products */,
 				339095AB0AB446E80FAFAB1F /* Pods */,
-				CBD5D8F985063CC33BC20302 /* Frameworks */,
+				3B4D15B184192A4527A3BB00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -425,11 +425,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E519FC3022ECD66600512CDD /* Build configuration list for PBXNativeTarget "News-MVVM" */;
 			buildPhases = (
-				05C7D9BC999063434C3318B7 /* [CP] Check Pods Manifest.lock */,
+				ABF4573E77BE3E0512A39FFD /* [CP] Check Pods Manifest.lock */,
 				E519FC1A22ECD66200512CDD /* Sources */,
 				E519FC1B22ECD66200512CDD /* Frameworks */,
 				E519FC1C22ECD66200512CDD /* Resources */,
-				6ACB1A50BE9FA19B43892652 /* [CP] Embed Pods Frameworks */,
+				41A1341C7F6DB9D6CCF52795 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -495,7 +495,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05C7D9BC999063434C3318B7 /* [CP] Check Pods Manifest.lock */ = {
+		41A1341C7F6DB9D6CCF52795 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-News-MVVM/Pods-News-MVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-News-MVVM/Pods-News-MVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-News-MVVM/Pods-News-MVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABF4573E77BE3E0512A39FFD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -515,23 +532,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6ACB1A50BE9FA19B43892652 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-News-MVVM/Pods-News-MVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-News-MVVM/Pods-News-MVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-News-MVVM/Pods-News-MVVM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -725,7 +725,7 @@
 		};
 		E519FC3122ECD66600512CDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9061AC4F45FBC6127A02C4BC /* Pods-News-MVVM.debug.xcconfig */;
+			baseConfigurationReference = 43DF7DEB89CB250235CB82C6 /* Pods-News-MVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -737,14 +737,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "shaat.News-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		E519FC3222ECD66600512CDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52E25FC23C36A1DF2BD4A83F /* Pods-News-MVVM.release.xcconfig */;
+			baseConfigurationReference = 0E571FA101E925D2B6B31E10 /* Pods-News-MVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -756,7 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "shaat.News-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

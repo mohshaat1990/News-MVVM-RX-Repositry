@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import LocalizableLib
 
 class LoginViewModel: ViewModelProtocol {
     
