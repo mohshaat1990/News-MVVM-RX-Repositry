@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - Functions
-    func setupTextFields(){
+    func setupTextFields() {
         userNameTextField.textFiled.returnKeyType = .next
         passwordTextField.textFiled.returnKeyType = .done
         passwordTextField.textFiled.text = ""
@@ -94,7 +94,7 @@ extension LoginViewController: ControllerType {
     }
     
     static func create(with viewModel: LoginViewModel) -> UIViewController {
-        let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
+      //  let storyboard = UIStoryboard(name: "Authorization", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         controller.viewModel = viewModel
         return controller

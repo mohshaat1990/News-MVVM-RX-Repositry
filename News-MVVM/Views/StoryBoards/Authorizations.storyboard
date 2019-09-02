@@ -37,7 +37,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viX-j7-gSd" customClass="TransitionButton" customModule="TransitionButton">
-                                                <rect key="frame" x="35" y="416" width="305" height="66"/>
+                                                <rect key="frame" x="35" y="425" width="305" height="66"/>
                                                 <color key="backgroundColor" red="0.3411764706" green="0.76470588240000004" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="66" id="LYe-aY-3NB"/>
@@ -60,7 +60,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfV-ce-RaQ" customClass="CustomTextFiled" customModule="News_MVVM" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="176" width="275" height="40"/>
+                                                <rect key="frame" x="50" y="185" width="275" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Whe-nn-gwW"/>
@@ -71,7 +71,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBZ-sQ-lce" customClass="CustomTextFiled" customModule="News_MVVM" customModuleProvider="target">
-                                                <rect key="frame" x="50" y="276" width="275" height="40"/>
+                                                <rect key="frame" x="50" y="285" width="275" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="raw-Ow-XpA"/>
@@ -82,7 +82,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ph-by-Bcl">
-                                                <rect key="frame" x="162.5" y="532" width="50" height="41"/>
+                                                <rect key="frame" x="158" y="541" width="59" height="32"/>
                                                 <fontDescription key="fontDescription" name="rpt-Regular" family="rpt" pointSize="17"/>
                                                 <state key="normal" title="Sign up">
                                                     <color key="titleColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,7 +92,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-FJ-UlY">
-                                                <rect key="frame" x="0.0" y="45" width="375" height="38.5"/>
+                                                <rect key="frame" x="0.0" y="45" width="375" height="27"/>
                                                 <fontDescription key="fontDescription" name="rpt-Regular" family="rpt" pointSize="23"/>
                                                 <color key="textColor" red="0.3411764706" green="0.76470588240000004" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKx-iv-wVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2922" y="49"/>
+            <point key="canvasLocation" x="3194" y="-135"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="iRR-0R-67i">
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fg8-GT-dHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3798" y="48"/>
+            <point key="canvasLocation" x="3916" y="-135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bOW-FN-TJF">
