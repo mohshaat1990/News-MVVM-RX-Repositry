@@ -56,9 +56,10 @@ class LoginViewModel: ViewModelProtocol {
         
         signInDidTapSubject
             .withLatestFrom(credentialsObservable).filter { credentials in
-                
                 return self.validateLoginTextFields(credentials:credentials)
-            }
+            }.do(onNext: { _ in
+                 self.rx_isLoadingSubject.onNext(true)
+            })
             .flatMapLatest { credentials in
                 return loginService.signIn(with: credentials).materialize()
             }.subscribe(onNext: { [weak self] event in
@@ -77,14 +78,9 @@ class LoginViewModel: ViewModelProtocol {
                 }
             })
             .disposed(by: disposeBag)
-        observeUserNameSubject()
     }
     
-    func observeUserNameSubject() {
-        userNameSubject.subscribe(onNext: { (text) in
-            print(text)
-        })
-    }
+
     func validateLoginTextFields(credentials: Credentials) -> Bool {
         var valid = true
         let error = ErrorResponse(JSON:[:])
@@ -101,13 +97,9 @@ class LoginViewModel: ViewModelProtocol {
             error?.password   = "please enter your password".localized()
             valid = false
         }
-        
         if valid == false {
-            self.validationErrorsSubject.onNext(error!)
-        } else {
-            self.rx_isLoadingSubject.onNext(true)
+        self.validationErrorsSubject.onNext(error!)
         }
-        
         return valid
     }
     
