@@ -25,6 +25,7 @@ class LoginViewModel: ViewModelProtocol {
     }
     
     // MARK: - Public properties
+    
     let input: Input
     let output: Output
     
