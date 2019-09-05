@@ -81,7 +81,6 @@ class LoginViewModel: ViewModelProtocol {
             .disposed(by: disposeBag)
     }
     
-
     func validateLoginTextFields(credentials: Credentials) -> Bool {
         var valid = true
         let error = ErrorResponse(JSON:[:])
