@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2F8867A411489427A4D17744 /* Pods_News_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88E5F3442F0D5A502BE8C5C /* Pods_News_MVVM.framework */; };
+		D95EBCD423214D0500758D09 /* SecureFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EBCD323214D0500758D09 /* SecureFieldViewModel.swift */; };
+		D95EBCD623214D0D00758D09 /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EBCD523214D0C00758D09 /* FieldViewModel.swift */; };
+		D95EBCD823214E5F00758D09 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EBCD723214E5F00758D09 /* PasswordViewModel.swift */; };
+		D95EBCDA23214F4600758D09 /* UserNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EBCD923214F4600758D09 /* UserNameViewModel.swift */; };
 		E519FC2222ECD66200512CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519FC2122ECD66200512CDD /* AppDelegate.swift */; };
 		E519FC2922ECD66600512CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E519FC2822ECD66600512CDD /* Assets.xcassets */; };
 		E519FC2C22ECD66600512CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E519FC2A22ECD66600512CDD /* LaunchScreen.storyboard */; };
@@ -61,6 +65,10 @@
 		0E571FA101E925D2B6B31E10 /* Pods-News-MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-MVVM.release.xcconfig"; path = "Target Support Files/Pods-News-MVVM/Pods-News-MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		43DF7DEB89CB250235CB82C6 /* Pods-News-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-News-MVVM/Pods-News-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		B88E5F3442F0D5A502BE8C5C /* Pods_News_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95EBCD323214D0500758D09 /* SecureFieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureFieldViewModel.swift; sourceTree = "<group>"; };
+		D95EBCD523214D0C00758D09 /* FieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
+		D95EBCD723214E5F00758D09 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		D95EBCD923214F4600758D09 /* UserNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewModel.swift; sourceTree = "<group>"; };
 		E519FC1E22ECD66200512CDD /* News-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E519FC2122ECD66200512CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E519FC2822ECD66600512CDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -274,6 +282,8 @@
 			children = (
 				E5F4A03122EDD53E00A9C6FB /* LoginViewModel.swift */,
 				E52107F622F0A48400465497 /* NewsViewModel.swift */,
+				D95EBCD723214E5F00758D09 /* PasswordViewModel.swift */,
+				D95EBCD923214F4600758D09 /* UserNameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -401,6 +411,8 @@
 		E5F4A03722EDEF0E00A9C6FB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D95EBCD523214D0C00758D09 /* FieldViewModel.swift */,
+				D95EBCD323214D0500758D09 /* SecureFieldViewModel.swift */,
 				E5F4A03822EDEF0E00A9C6FB /* ViewModelType.swift */,
 				E5F4A03922EDEF0E00A9C6FB /* ControllerType.swift */,
 				E52107E622F08C9E00465497 /* ConfigureCell.swift */,
@@ -549,6 +561,8 @@
 				E52107F922F0AF0B00465497 /* HeadLinesServiceProtocol.swift in Sources */,
 				E5534D7C22EFC37200A75DF6 /* NewsViewController.swift in Sources */,
 				E5F4A05222EE3E2500A9C6FB /* LoginResponse.swift in Sources */,
+				D95EBCD623214D0D00758D09 /* FieldViewModel.swift in Sources */,
+				D95EBCD823214E5F00758D09 /* PasswordViewModel.swift in Sources */,
 				E5F4A02322EDC42E00A9C6FB /* CustomTextFiled.swift in Sources */,
 				E52107EB22F08EE800465497 /* TopHeadlines.swift in Sources */,
 				E52107F722F0A48400465497 /* NewsViewModel.swift in Sources */,
@@ -571,10 +585,12 @@
 				E5F4A04E22EE335900A9C6FB /* AuthorizationService.swift in Sources */,
 				E5F4A05022EE370100A9C6FB /* AuthorizationApi.swift in Sources */,
 				E5F4A04722EE0F2C00A9C6FB /* ErrorResponse.swift in Sources */,
+				D95EBCD423214D0500758D09 /* SecureFieldViewModel.swift in Sources */,
 				E52107E722F08C9E00465497 /* ConfigureCell.swift in Sources */,
 				E5F714C822F0F59300A4E87F /* HeadLinesWebService.swift in Sources */,
 				E5F4A03622EDEEEF00A9C6FB /* UIViewController+Extensions.swift in Sources */,
 				E52107EF22F08F0000465497 /* Source.swift in Sources */,
+				D95EBCDA23214F4600758D09 /* UserNameViewModel.swift in Sources */,
 				E519FC5222ECE42A00512CDD /* FontConstants.swift in Sources */,
 				E519FC2222ECD66200512CDD /* AppDelegate.swift in Sources */,
 				E519FC5622ECE47A00512CDD /* UIColors+Extensions.swift in Sources */,

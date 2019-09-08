@@ -56,7 +56,7 @@ extension LoginViewController: ControllerType {
     func bindViews(with viewModel: LoginViewModel) {
         userNameTextField.textFiled.rx.text.asObservable()
             .ignoreNil()
-            .subscribe(viewModel.input.userName)
+            .subscribe(viewModel.input.userName.asObserver())
             .disposed(by: disposeBag)
         passwordTextField.textFiled.rx.text.asObservable()
             .ignoreNil()

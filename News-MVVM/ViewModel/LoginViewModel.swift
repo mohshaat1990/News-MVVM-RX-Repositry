@@ -31,8 +31,8 @@ class LoginViewModel: ViewModelProtocol {
     
     // MARK: - Private properties
     private let rx_isLoadingSubject = PublishSubject<Bool>()
-    private let userNameSubject = PublishSubject<String>()
-    private let passwordSubject = PublishSubject<String>()
+    private let userNameViewModel = UserNameViewModel()
+    private let passwordViewModel = PasswordViewModel()
     private let signInDidTapSubject = PublishSubject<Void>()
     private let loginResultSubject = PublishSubject<User>()
     private let serverErrorsSubject = PublishSubject<String>()
@@ -40,7 +40,7 @@ class LoginViewModel: ViewModelProtocol {
     private let disposeBag = DisposeBag()
     
     private var credentialsObservable: Observable<Credentials> {
-        return Observable.combineLatest(userNameSubject.asObservable(), passwordSubject.asObservable()) { (userName, password) in
+        return Observable.combineLatest(userNameViewModel.value.asObservable(), passwordViewModel.value.asObservable()) { (userName, password) in
             return Credentials(userName: userName, password: password)
         }
     }
@@ -48,17 +48,16 @@ class LoginViewModel: ViewModelProtocol {
     
     init(_ loginService: LoginServiceProtocol) {
         
-        input = Input(userName: userNameSubject.asObserver(),
-                      password: passwordSubject.asObserver(),
+        input = Input(userName: userNameViewModel.value.asObserver(),
+                      password: passwordViewModel.value.asObserver(),
                       signInDidTap: signInDidTapSubject.asObserver())
         
         output = Output(rx_isLoading: rx_isLoadingSubject.asObservable(), loginResultObservable: loginResultSubject.asObservable(),
                         serverErrorsObservable: serverErrorsSubject.asObservable(), validationErrorsObservable: validationErrorsSubject.asObservable())
         
-        signInDidTapSubject
-            .withLatestFrom(credentialsObservable).filter { credentials in
-                return self.validateLoginTextFields(credentials:credentials)
-            }.do(onNext: { _ in
+        signInDidTapSubject.filter{
+             return self.validateLoginTextFields()
+            }.withLatestFrom(credentialsObservable).do(onNext: { _ in
                  self.rx_isLoadingSubject.onNext(true)
             })
             .flatMapLatest { credentials in
@@ -81,25 +80,18 @@ class LoginViewModel: ViewModelProtocol {
             .disposed(by: disposeBag)
     }
     
-    func validateLoginTextFields(credentials: Credentials) -> Bool {
-        var valid = true
+    func validateLoginTextFields() -> Bool {
         let error = ErrorResponse(JSON:[:])
-        if  credentials.userName.isBlank {
+        var valid = true
+        if !userNameViewModel.validate() {
             valid = false
-            error?.name = "please enter user name".localized()
+            error?.name = userNameViewModel.errorMessage
         }
-        if  !credentials.password.isBlank {
-            if !credentials.password.isPasswordMoreThaneightCharacters {
-                error?.password = "password must be more than eight characters".localized()
-                valid = false
-            }
-        }else {
-            error?.password   = "please enter your password".localized()
+        if !passwordViewModel.validate() {
             valid = false
+            error?.password = passwordViewModel.errorMessage
         }
-        if valid == false {
         self.validationErrorsSubject.onNext(error!)
-        }
         return valid
     }
     
