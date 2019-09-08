@@ -47,7 +47,6 @@ class LoginViewModel: ViewModelProtocol {
     
     
     init(_ loginService: LoginServiceProtocol) {
-        
         input = Input(userName: userNameViewModel.value.asObserver(),
                       password: passwordViewModel.value.asObserver(),
                       signInDidTap: signInDidTapSubject.asObserver())
@@ -72,7 +71,7 @@ class LoginViewModel: ViewModelProtocol {
                      self?.serverErrorsSubject.onNext(user.message ?? "")
                     }
                 case .error(let error):
-            self?.serverErrorsSubject.onNext(error.localizedDescription)
+                self?.serverErrorsSubject.onNext(error.localizedDescription)
                 default:
                     break
                 }
