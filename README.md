@@ -37,3 +37,6 @@ This makes it clear that at some point, the View has to provide all the Inputs (
 <img width="404" alt="Screen Shot 2020-11-17 at 1 25 47 PM" src="https://user-images.githubusercontent.com/11280137/99384649-6a83c680-28d8-11eb-8cbf-cde75335567c.png">
 <img width="538" alt="Screen Shot 2020-11-17 at 1 26 41 PM" src="https://user-images.githubusercontent.com/11280137/99384763-930bc080-28d8-11eb-9ce5-bccd99c982fe.png">
 
+### Important Note : Pass the service on initalization Of View Model to make view model more configrable and to use it on unit testing (Dependency Injection)
+<img width="722" alt="Screen Shot 2020-11-17 at 1 34 51 PM" src="https://user-images.githubusercontent.com/11280137/99385443-af5c2d00-28d9-11eb-9654-ff1d800c0c7e.png">
+<img width="582" alt="Screen Shot 2020-11-17 at 1 33 34 PM" src="https://user-images.githubusercontent.com/11280137/99385359-8b98e700-28d9-11eb-9a67-75577a223f15.png">
