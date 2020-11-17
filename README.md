@@ -1,4 +1,4 @@
-#  MVVM With Repository Best Bractise News App
+#  MVVM With Repository Best Bractise News App 
 
 ## ViewModels
 
@@ -23,7 +23,7 @@
 1- First approach — without Subjects
 2- Second approach — with Subjects
  
-### First approach — without Subjects
+### First approach — without Subjects (https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiouLjVvIntAhW2WxUIHSI2Ap8QFjAAegQIBBAC&url=https%3A%2F%2Fmedium.com%2Fblablacar%2Frxswift-mvvm-66827b8b3f10&usg=AOvVaw2KPTOAIpw1Ac2Mv7D5EW8u)
 
 - ViewModels are all about transforming Inputs into Outputs. Let’s add that to our ViewModelType protocol:
 
