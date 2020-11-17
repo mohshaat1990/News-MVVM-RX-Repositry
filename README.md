@@ -40,3 +40,16 @@ This makes it clear that at some point, the View has to provide all the Inputs (
 ### Important Note : Pass the service on initalization Of View Model to make view model more configrable and to use it on unit testing (Dependency Injection)
 <img width="722" alt="Screen Shot 2020-11-17 at 1 34 51 PM" src="https://user-images.githubusercontent.com/11280137/99385443-af5c2d00-28d9-11eb-9654-ff1d800c0c7e.png">
 <img width="582" alt="Screen Shot 2020-11-17 at 1 33 34 PM" src="https://user-images.githubusercontent.com/11280137/99385359-8b98e700-28d9-11eb-9a67-75577a223f15.png">
+
+### try use Repositry and implement ptotcols in Repositries to solve problem if your application work offline and  online or on unit testing 
+
+<img width="560" alt="Screen Shot 2020-11-17 at 1 41 03 PM" src="https://user-images.githubusercontent.com/11280137/99386058-8be5b200-28da-11eb-9696-bf6ee843c8b6.png">
+
+
+<img width="756" alt="Screen Shot 2020-11-17 at 1 42 27 PM" src="https://user-images.githubusercontent.com/11280137/99386189-bdf71400-28da-11eb-8dc1-0bb326cd79c1.png">
+
+<img width="768" alt="Screen Shot 2020-11-17 at 1 40 27 PM" src="https://user-images.githubusercontent.com/11280137/99386001-753f5b00-28da-11eb-9137-1d4a4e1ade3d.png">
+
+<img width="637" alt="Screen Shot 2020-11-17 at 1 39 39 PM" src="https://user-images.githubusercontent.com/11280137/99385941-59d45000-28da-11eb-86c0-51dee9625339.png">
+
+<img width="646" alt="Screen Shot 2020-11-17 at 1 41 55 PM" src="https://user-images.githubusercontent.com/11280137/99386155-ad469e00-28da-11eb-9583-afc8d7d1c64b.png">
